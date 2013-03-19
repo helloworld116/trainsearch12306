@@ -1,0 +1,54 @@
+/*---------------��ʾ˵����Ϣ����˵���� ��ʼ------------------*/
+.popdivstyle{ width:300px; background:url(otsquery/images/tips/popdiv_1.gif) no-repeat top left;font-size:12px;}
+.pop_hd { height:29px; line-height:29px; color:#333; font-weight:bold ; text-indent:10px;}
+.pop_cd { background:url(otsquery/images/tips/popdiv_2.gif) repeat-y top left; width:290px; padding:0 5px; line-height:18px; }
+.pop_cd ol { margin-top: 0px; margin-left: 0px;}
+.pop_cd ol li { list-style: decimal outside none; line-height: 25px; margin-left: 0px; }
+.pop_cd p{ margin:0; padding:5px; text-indent:20px;}
+.pop_cd p.blue{ color:#1476BD;}
+.pop_bd { height:8px; background:url(otsquery/images/tips/popdiv_3.gif) no-repeat top left; overflow:hidden;}
+/*---------------��ʾ˵����Ϣ����˵���� ����------------------*/
+.base_txtdiv {
+	color: #0055aa;
+	border-bottom: 1px #0055aa dashed;
+	cursor: pointer
+}
+
+/*---------------ͣ��վ������Ч�� ��ʼ------------------*/
+.stopdivstyle{ width:474px;background:url(otsquery/images/tips/stopdiv_1.gif) no-repeat top left;font-size:12px;}
+.jmp_hd { height:29px; line-height:29px; color:#333; }
+.jmp_cd { background:url(otsquery/images/tips/stopdiv_2.gif) repeat-y top left;}
+.jmp_bd { height:8px; background:url(otsquery/images/tips/stopdiv_3.gif) no-repeat top left; } 
+.tb_train_title td { padding:5px 0; text-align:center;}
+.pg_station {
+    font: 12px/1.5 arial;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background:url(otsquery/images/tips/stopdiv_2.gif) repeat-y top left;
+}
+.pg_station_current {
+    color: #666666;
+    cursor: default;
+    text-decoration: none;
+}
+
+.stopflip:link {
+	FONT-SIZE: 12px; COLOR: #0055aa; TEXT-DECORATION: none
+}
+.stopflip:active {
+	FONT-SIZE: 12px; COLOR: #0055aa; TEXT-DECORATION: none
+}
+.stopflip:visited {
+	FONT-SIZE: 12px; COLOR: #0055aa; TEXT-DECORATION: none
+}
+.stopflip:hover {
+	FONT-SIZE: 12px; COLOR: #0055aa; TEXT-DECORATION: underline
+}
+/*---------------ͣ��վ������Ч�� ����------------------*/
+
+/*---------------��ͨ��ʾ��Ϣ������Ч�� ��ʼ------------------*/
+.tishi{ width:120px; font-size:12px; }
+.tishi_hd{height:8px; width:auto; background:url(otsquery/images/tips/tishi.gif) no-repeat top left; overflow:hidden;}
+.tishi_cd{ border:1px solid #FFC54D; border-top:none; padding:3px; background:#FBE178 url(otsquery/images/tips/tishi1.gif) repeat-x top; line-height:18px;}
+/*---------------��ͨ��ʾ��Ϣ������Ч�� ����------------------*/

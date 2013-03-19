@@ -1,0 +1,214 @@
+<table width="744" border="0" align="right" cellpadding="0" cellspacing="0">
+
+<tbody><tr>
+<td>
+
+
+
+<table width="930" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+<table width="930" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td width="11" background="in_07.gif" height="30">
+</td>
+<td style="border-top: 2px solid #198DD1;">
+<span style="color: #D1510F;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 23px;
+    text-decoration: none;">余票查询</span>
+</td>
+<td width="27" background="in_06.gif" height="30">
+</td>
+<td valign="top" style="background-image: url('in_12.gif');background-repeat: repeat-x;">
+<table width="300" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td valign="top">
+<marquee id="scrollArea" height="20" width="500" loop="-1" scrollamount="3" scrolldelay="50" direction="left"><font color="yellow">余票查询结果仅供参考，具体以车站提供信息为准。（www.12306.cn）</font></marquee>
+</td>
+</tr>
+</tbody></table>
+</td> 
+<td width="18" background="in_11.gif" height="30">
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+<table width="930" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td style="background-image: url('in_14.gif');background-position: center bottom;
+    background-repeat: repeat-x;
+    border-left: 1px solid #1476BD;" align="left">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+<div style="margin:0 auto; height:15px; overflow:hidden;"></div>
+<div style="margin:0 auto; line-height:25px; text-align:left; margin-top:-8px;">
+<div class="cx_form"><form name="querySingleForm" method="post" action="/otsquery/query/queryRemanentTicketAction.do?method=queryTrain" _lpchecked="1">
+	<!--form_con-->
+
+	<div id="right" style="margin-bottom:17px;">
+	<div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="cx_from">
+		<tbody><tr>
+			<td width="97px" class="font_r"><span>*</span>出发地：</td>
+			<td width="100px">
+				<input type="hidden" name="orderRequest.from_station_telecode" value="SZQ" id="fromStation">
+				<input type="text" name="orderRequest.from_station_name" maxlength="4" value="" id="fromStationText" style="width: 100px;" class="input_20txt">
+				<input type="hidden" id="station_name_show" name="station_name_show" value="show">
+			</td>
+			<td width="64px" class="font_r"><span>*</span>目的地：</td>
+			<td width="100px">
+				<input type="hidden" name="orderRequest.to_station_telecode" value="CSQ" id="toStation">
+				<input type="text" name="orderRequest.to_station_name" maxlength="15" value="" id="toStationText" style="width: 100px;" class="input_20txt">
+			</td>
+			<td width="120px" class="font_r"><span>*</span>出发日期：</td>
+			<td><input type="text" name="orderRequest.train_date" value="" id="startdatepicker" style="width: 150px;" class="input_20txt" readonly=""></td>
+			<td width="90px" class="font_r">出发时间：</td>
+			<td><select name="orderRequest.start_time_str" id="startTime"><option value="00:00--24:00">00:00--24:00</option>
+<option value="00:00--06:00">00:00--06:00</option>
+<option value="06:00--12:00">06:00--12:00</option>
+<option value="12:00--18:00">12:00--18:00</option>
+<option value="18:00--24:00">18:00--24:00</option></select></td>
+			<td class="font_r">
+			
+			</td>
+			
+		</tr>
+		<tr>
+			<td class="font_r">出发车次：</td>
+			<td colspan="3"><input type="hidden" name="orderRequest.train_no" value="" id="trainCode"> <input type="text" name="orderRequest.trainCodeText" value="" id="trainCodeText" style="width: 270px" class="input_20txt">
+			<div id="trainCodeSuggest" class="ac_results_width" style="display: none; "></div>
+			</td>
+			<td></td> 
+			<td colspan="3">
+				<input type="button" id="submitQuery" value="查询" style="height: 25px;width:70px">
+			 	<input type="button" id="stu_submitQuery" value="学生团体查询" style="height: 25px;width:120px" "="">
+				<input type="button" id="nmg_submitQuery" value="农民工团体查询" style="height: 25px ;width:120px">
+			</td> 
+ 
+			<td class="font_r">
+			
+			</td>
+			<td style="display: none;"><input type="checkbox" name="includeStudent" value="0X00" id="includeStudent">乘客中包含学生</td>
+		</tr>
+		
+		
+	</tbody></table>
+	</div>
+	</div>
+
+	<div id="show1" style="display: block；margin-top:-5px;">
+	<div>
+	<div class="in_fromleft">
+	<ul>
+		<li><input type="checkbox" name="trainClassArr" id="ccType" value="QB">全部</li>
+	<li><input type="checkbox" id="ccType" name="trainClassArr" value="D" checked="checked">动车</li>
+	<li><input type="checkbox" id="ccType" name="trainClassArr" value="Z">Z字头</li>
+	<li><input type="checkbox" id="ccType" name="trainClassArr" value="T">T字头</li>
+	<li><input type="checkbox" id="ccType" name="trainClassArr" value="K">K字头</li>
+	<li><input type="checkbox" id="ccType" name="trainClassArr" value="QT">其他</li>
+	
+	</ul>
+	</div>
+	<div class="in_fromr" style="width:25%;float:left; margin-right:10px;">
+	<ul>
+		<li><input name="trainPassType" type="radio" value="GL">过路</li>
+		<li><input name="trainPassType" type="radio" value="SF">始发</li>
+		<li><input name="trainPassType" type="radio" value="QB" checked="checked">全部</li>
+
+	</ul>
+	</div>
+	
+
+	
+	</div>
+	
+	<div class="clear"></div>
+
+	<div class="cx_zc">
+	<ul id="seatAddResult"></ul>
+	</div>
+	</div>
+	
+
+	<!--shens end-->
+	
+</form> <!--form_con end-->
+</div>
+</div>
+<div style="margin:0 auto; height:15px; overflow:hidden;"></div>
+</div>
+
+
+
+
+
+
+<div class="cx_title_w">
+<div class="cx_titleleft" id="cx_titleleft">出发日期：<span>2013-01-21&nbsp;&nbsp;&nbsp;&nbsp;深圳→长沙</span>(共  <span> 30 </span>趟列车)</div>
+<div class="cx_titler">
+<ul>
+	<li>“*”代表未到起售时间</li>
+	<li>“--”代表无此席别</li>
+	<li>“无”代表票已售完</li>
+</ul>
+</div>
+</div>
+
+<!-- dhtmlxGrid -->
+<div id="gridbox" width="100%" height="350px" align="left" style="background-color: white; overflow: hidden; width: 100%; height: 350px; cursor: default; " class="gridbox gridbox_light"><table cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed; "><tbody><tr style=""><td style="vertical-align: top; "><div style="width: 100%; height: 200px; overflow: hidden; position: relative; "><img style="display: none; position: absolute; " src="/otsquery/dhtmlxGrid/codebase/grid_imgs/sort_desc.gif"><table class="xhdr" cellpadding="0" cellspacing="0" style="width: 100%; "><tbody><tr><td><table style="border: 0px solid gray; table-layout: fixed; " cellspacing="0" cellpadding="0" class="hdr" width="100%"><tbody><tr style="height: auto; "><th style="height: 0px; width: 60px; "></th><th style="height: 0px; width: 94px; "></th><th style="height: 0px; width: 94px; "></th><th style="height: 0px; width: 50px; "></th><th style="height: 0px; width: 46px; "></th><th style="height: 0px; width: 46px; "></th><th style="height: 0px; width: 46px; "></th><th style="height: 0px; width: 46px; "></th><th style="height: 0px; width: 60px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 112px; "></th></tr><tr><td rowspan="2" style="cursor: default; "><div class="hdrcell"><div style="text-align:center;">车次&nbsp;&nbsp;</div></div></td><td colspan="3" style="cursor: default; "><div class="hdrcell"><div style="text-align:center;">查询区间</div></div></td><td colspan="11" style="cursor: default; "><div class="hdrcell"><div style="text-align:center;">余票信息</div></div></td><td rowspan="2" style="cursor: default; "><div class="hdrcell"><div style="text-align:center;">备注&nbsp;&nbsp;</div></div></td></tr><tr><td style="cursor: default; ">发站</td><td style="cursor: default; ">到站</td><td>历时</td><td>商务座</td><td style="cursor: e-resize; ">特等座</td><td style="cursor: default; ">一等座</td><td style="cursor: default; ">二等座</td><td style="cursor: default; ">高级软卧</td><td style="cursor: default; ">软卧</td><td style="cursor: default; ">硬卧</td><td style="cursor: e-resize; ">软座</td><td style="cursor: default; ">硬座</td><td>无座</td><td style="cursor: e-resize; ">其他</td></tr></tbody></table></td><td style="width: 100%; " class="xhdr_last">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></tbody></table></div></td></tr><tr><td><div style="width: 100%; height: 298px; overflow: auto; position: relative; top: -148px; " class="objbox"><div style="width: 894px; "><table cellspacing="0" cellpadding="0" style="width: 894px; table-layout: fixed; " class="obj row20px"><tbody><tr style="height: auto; "><th style="height: 0px; width: 60px; "></th><th style="height: 0px; width: 94px; "></th><th style="height: 0px; width: 94px; "></th><th style="height: 0px; width: 50px; "></th><th style="height: 0px; width: 46px; "></th><th style="height: 0px; width: 46px; "></th><th style="height: 0px; width: 46px; "></th><th style="height: 0px; width: 46px; "></th><th style="height: 0px; width: 60px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 40px; "></th><th style="height: 0px; width: 112px; "></th></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G100201" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G100201#IOQ#CWQ')" onmouseout="onStopOut()">G1002</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;07:00</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;10:06</td><td align="center" valign="">03:06</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">49</td><td align="center" valign="">282</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i000G601202" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G601202#IOQ#CWQ')" onmouseout="onStopOut()">G6012</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;07:12</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;10:39</td><td align="center" valign="">03:27</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">49</td><td align="center" valign="">419</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i00000G7200" class="base_txtdiv" onmouseover="javascript:onStopHover('6i00000G7200#IOQ#CWQ')" onmouseout="onStopOut()">G72</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;07:56</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;11:08</td><td align="center" valign="">03:12</td><td align="center" valign="">10</td><td align="center" valign="">--</td><td align="center" valign="">110</td><td align="center" valign="">499</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i000G601405" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G601405#IOQ#CWQ')" onmouseout="onStopOut()">G6014</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;08:12</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;11:30</td><td align="center" valign="">03:18</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">49</td><td align="center" valign="">276</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G100401" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G100401#IOQ#CWQ')" onmouseout="onStopOut()">G1004</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;08:30</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;11:44</td><td align="center" valign="">03:14</td><td align="center" valign="">--</td><td align="center" valign="">6</td><td align="center" valign="">47</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i00000G7401" class="base_txtdiv" onmouseover="javascript:onStopHover('6i00000G7401#IOQ#CWQ')" onmouseout="onStopOut()">G74</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;08:50</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;12:06</td><td align="center" valign="">03:16</td><td align="center" valign="">12</td><td align="center" valign="">--</td><td align="center" valign="">117</td><td align="center" valign="">452</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G100601" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G100601#IOQ#CWQ')" onmouseout="onStopOut()">G1006</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;09:22</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;12:50</td><td align="center" valign="">03:28</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">46</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i0000G82201" class="base_txtdiv" onmouseover="javascript:onStopHover('6i0000G82201#IOQ#CWQ')" onmouseout="onStopOut()">G822</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;10:00</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;13:21</td><td align="center" valign="">03:21</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">42</td><td align="center" valign="">4</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G100800" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G100800#IOQ#CWQ')" onmouseout="onStopOut()">G1008</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;10:25</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;13:54</td><td align="center" valign="">03:29</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">48</td><td align="center" valign="">111</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i000G601601" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G601601#IOQ#CWQ')" onmouseout="onStopOut()">G6016</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;10:40</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;14:00</td><td align="center" valign="">03:20</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">48</td><td align="center" valign="">311</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G101000" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G101000#IOQ#CWQ')" onmouseout="onStopOut()">G1010</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;11:20</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;14:44</td><td align="center" valign="">03:24</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">44</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_69000K906407" class="base_txtdiv" onmouseover="javascript:onStopHover('69000K906407#OSQ#CSQ')" onmouseout="onStopOut()">K9064</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳西&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;11:20</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;22:10</td><td align="center" valign="">10:50</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">30</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G601806" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G601806#IOQ#CWQ')" onmouseout="onStopOut()">G6018</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;12:00</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;15:44</td><td align="center" valign="">03:44</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">48</td><td align="center" valign="">289</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i000G101201" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G101201#IOQ#CWQ')" onmouseout="onStopOut()">G1012</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;12:38</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;15:58</td><td align="center" valign="">03:20</td><td align="center" valign="">5</td><td align="center" valign="">--</td><td align="center" valign="">105</td><td align="center" valign="">534</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i0000G82600" class="base_txtdiv" onmouseover="javascript:onStopHover('6i0000G82600#IOQ#CWQ')" onmouseout="onStopOut()">G826</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;13:00</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;16:16</td><td align="center" valign="">03:16</td><td align="center" valign="">--</td><td align="center" valign="">5</td><td align="center" valign="">45</td><td align="center" valign="">388</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i00000G7800" class="base_txtdiv" onmouseover="javascript:onStopHover('6i00000G7800#IOQ#CWQ')" onmouseout="onStopOut()">G78</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;14:00</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;16:52</td><td align="center" valign="">02:52</td><td align="center" valign="">15</td><td align="center" valign="">--</td><td align="center" valign="">115</td><td align="center" valign="">701</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G602001" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G602001#IOQ#CWQ')" onmouseout="onStopOut()">G6020</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;14:12</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;17:31</td><td align="center" valign="">03:19</td><td align="center" valign="">--</td><td align="center" valign="">3</td><td align="center" valign="">44</td><td align="center" valign="">252</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i000G600202" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G600202#IOQ#CWQ')" onmouseout="onStopOut()">G6002</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;15:00</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;17:52</td><td align="center" valign="">02:52</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">49</td><td align="center" valign="">393</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G101401" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G101401#IOQ#CWQ')" onmouseout="onStopOut()">G1014</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;15:20</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;18:52</td><td align="center" valign="">03:32</td><td align="center" valign="">15</td><td align="center" valign="">--</td><td align="center" valign="">116</td><td align="center" valign="">742</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i000G602200" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G602200#IOQ#CWQ')" onmouseout="onStopOut()">G6022</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;15:35</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;18:56</td><td align="center" valign="">03:21</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">49</td><td align="center" valign="">378</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i00000G7600" class="base_txtdiv" onmouseover="javascript:onStopHover('6i00000G7600#IOQ#CWQ')" onmouseout="onStopOut()">G76</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;15:50</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;19:03</td><td align="center" valign="">03:13</td><td align="center" valign="">--</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i000G101601" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G101601#IOQ#CWQ')" onmouseout="onStopOut()">G1016</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;16:20</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;19:40</td><td align="center" valign="">03:20</td><td align="center" valign="">15</td><td align="center" valign="">--</td><td align="center" valign="">117</td><td align="center" valign="">776</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G602400" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G602400#IOQ#CWQ')" onmouseout="onStopOut()">G6024</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;17:40</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;20:54</td><td align="center" valign="">03:14</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">49</td><td align="center" valign="">407</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6500000T9608" class="base_txtdiv" onmouseover="javascript:onStopHover('6500000T9608#SZQ#CSQ')" onmouseout="onStopOut()">T96</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;17:40</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;02:43</td><td align="center" valign="">09:03</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G101801" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G101801#IOQ#CWQ')" onmouseout="onStopOut()">G1018</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;18:00</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;21:20</td><td align="center" valign="">03:20</td><td align="center" valign="">15</td><td align="center" valign="">--</td><td align="center" valign="">116</td><td align="center" valign="">657</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_6i000G602600" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G602600#IOQ#CWQ')" onmouseout="onStopOut()">G6026</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;18:20</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;21:40</td><td align="center" valign="">03:20</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">48</td><td align="center" valign="">422</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_65000K900404" class="base_txtdiv" onmouseover="javascript:onStopHover('65000K900404#SZQ#CSQ')" onmouseout="onStopOut()">K9004</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;19:10</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;05:24</td><td align="center" valign="">10:14</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">12</td><td align="center" valign="">15</td><td align="center" valign="">--</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">111</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_65000K907609" class="base_txtdiv" onmouseover="javascript:onStopHover('65000K907609#BJQ#CSQ')" onmouseout="onStopOut()">K9076</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳东&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;19:43</td><td align="center" valign="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;05:38</td><td align="center" valign="">09:55</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="ev_light "><td align="center" valign=""><span id="id_6i000G602800" class="base_txtdiv" onmouseover="javascript:onStopHover('6i000G602800#IOQ#CWQ')" onmouseout="onStopOut()">G6028</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;深圳北&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;19:45</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;长沙南&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;23:26</td><td align="center" valign="">03:41</td><td align="center" valign="">--</td><td align="center" valign="">8</td><td align="center" valign="">41</td><td align="center" valign="">375</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr><tr class="odd_light "><td align="center" valign=""><span id="id_65000K901807" class="base_txtdiv" onmouseover="javascript:onStopHover('65000K901807#SZQ#CSQ')" onmouseout="onStopOut()">K9018</span></td><td align="center" valign=""><img src="first.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;20:50</td><td align="center" valign=""><img src="last.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长沙&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;06:36</td><td align="center" valign="">09:46</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">--</td><td align="center" valign="">1</td><td align="center" valign=""><font color="darkgray">无</font></td><td align="center" valign="">--</td><td align="center" valign="">55</td><td align="center" valign="">292</td><td align="center" valign="">--</td><td align="center" valign="">&nbsp;</td></tr></tbody></table></div></div></td></tr></tbody></table></div>
+
+
+
+
+</td>
+<td width="5" valign="bottom" style="background-image: url('in_15.gif');
+    background-repeat: repeat-y;">
+<img width="18" height="55" src="in_10.gif">
+</td>
+</tr>
+</tbody></table>
+
+
+<table width="930" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td width="11" height="18" background="in_08.gif">
+</td>
+<td style="background-image: url('in_13.gif');background-repeat: repeat-x;">
+<table width="11" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td height="18"></td>
+</tr>
+</tbody></table>
+</td>
+<td width="18" height="18" background="in_09.gif">
+</td>
+
+</tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+</tbody></table>
